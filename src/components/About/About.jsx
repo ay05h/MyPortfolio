@@ -40,18 +40,14 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-base lg:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am an undergraduate in Computer Science and Engineering at Amrita
-            Vishwa Vidyapeetham with a major in Artificial Intelligence and Data
-            Science. I am passionate about creating innovative and practical
-            tech solutions, especially in Full-Stack Web Development, Machine
-            Learning, and Blockchain. With hands-on experience, I’ve worked on
-            building interactive web applications using the MERN stack, applying
-            deep learning techniques to solve real-world problems, and exploring
-            blockchain technologies through smart contract development and
-            decentralized application design. I enjoy working on complex
-            problems that marry code, data, and user interface. I learn every
-            day and wish to be a developer who writes scalable code but also
-            delivers real-world outcomes through technology.
+            I'm a keen and inquisitive Computer Science undergraduate with a
+            keen interest in full-stack development, machine learning, natural
+            language processing (NLP), computer vision (CV), and blockchain.
+            Having hands-on experience, I've developed interactive web
+            applications with the MERN stack and used deep learning methods to
+            address real-world issues in areas such as NLP and CV. I'm
+            constantly learning and attempting to translate ideas into
+            meaningful, scalable tech solutions.
           </p>
           {/* Resume Button */}
           <a

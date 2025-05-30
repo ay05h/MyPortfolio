@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import BlurBlob from "./utils/BlurBlob";
+import Skills from "./components/skills/Skills";
 function App() {
   return (
     <div className="bg-[#050414]">
@@ -14,6 +15,7 @@ function App() {
       <div className="relative pt-20">
         <Header />
         <About />
+        <Skills />
       </div>
     </div>
   );
