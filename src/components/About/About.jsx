@@ -6,13 +6,13 @@ import Tilt from "react-parallax-tilt";
 const About = () => {
   return (
     <section
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-4 max-w-screen px-[5vw] md:px-[5vw] lg:px-[10vw] font-sans mt-16 md:mt-24 lg:mt-32"
       id="about"
     >
       {/*Main Container */}
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 lg:gap-16">
+      <div className="flex w-full flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 lg:gap-16">
         {/*Left Container */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+        <div className="md:w-[60%] text-center md:text-left mt-8 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
           </h1>
@@ -65,9 +65,9 @@ const About = () => {
         </div>
 
         {/*Right Container */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <div className="md:w-[40%] flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[25rem] lg:h-[25rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
