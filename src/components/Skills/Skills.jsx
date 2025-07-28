@@ -5,71 +5,114 @@ import { SkillsInfo } from "../../utils/Constansts";
 const Skills = () => (
   <section
     id="skills"
-    className="py-16 sm:py-20 md:py-24 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 md:px-[7vw] lg:px-[12vw] xl:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+    className="relative py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-[7vw] lg:px-[12vw] xl:px-[20vw] font-sans"
   >
-    {/*Heading Part*/}
-    <div className="text-center mb-6 sm:mb-8">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 leading-tight">
-        SKILLS
-      </h1>
-      <div className="bg-[#8245ec] w-16 sm:w-20 md:w-24 h-1 mx-auto mt-2"></div>
-      <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 mt-6 sm:mt-8 leading-relaxed max-w-2xl mx-auto px-2">
-        A collection of my technical skills and expertise honed through various
-        projects and experiences
-      </p>
-    </div>
-
-    {/*Skill Part*/}
-    <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-3 md:gap-4 lg:gap-5 py-6 sm:py-8 md:py-10 justify-center sm:justify-between">
-      {SkillsInfo.map((category, index) => (
-        <div
-          key={category.title}
-          className={`bg-gray-900 backdrop-blur-3xl px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-7 md:py-8 mb-6 sm:mb-8 md:mb-10 
-          ${
-            index === SkillsInfo.length - 1
-              ? "w-full"
-              : "w-full sm:w-[calc(50%-0.375rem)] md:w-[calc(50%-0.5rem)] lg:w-[calc(50%-0.625rem)]"
-          }
-          rounded-xl sm:rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300
-          shadow-[0_0_15px_1px_rgba(130,69,236,0.2)] hover:shadow-[0_0_25px_2px_rgba(130,69,236,0.4)]`}
-        >
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-300 mb-4 sm:mb-5 md:mb-6 leading-tight text-center sm:text-left">
-            {category.title}
+    <div className="relative z-10">
+      <div className="text-center mb-16 sm:mb-20">
+        <div className="relative inline-block">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-blue-200 mb-4 tracking-tight">
+            SKILLS
           </h1>
-
-          <Tilt
-            key={category.title}
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            scale={1.02}
-            transitionSpeed={1000}
-            gyroscope={true}
-            className="w-full"
-          >
-            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 w-full gap-2 sm:gap-3">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3 
-                  bg-transparent border-2 border-gray-700 hover:border-gray-600 
-                  rounded-2xl sm:rounded-3xl py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 text-center sm:text-left
-                  transition-all duration-200 hover:scale-105 hover:bg-gray-800/30"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6 flex-shrink-0"
-                  />
-                  <span className="text-xs sm:text-sm md:text-sm lg:text-sm text-gray-300 font-medium truncate">
-                    {skill.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Tilt>
+          <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
         </div>
-      ))}
+
+        <div className="flex items-center justify-center space-x-4 mb-8">
+          <div className="h-px w-16 bg-gradient-to-r from-transparent to-purple-400"></div>
+          <div className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 animate-pulse"></div>
+          <div className="h-px w-32 bg-gradient-to-r from-purple-400 to-blue-400"></div>
+          <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse delay-300"></div>
+          <div className="h-px w-16 bg-gradient-to-r from-blue-400 to-transparent"></div>
+        </div>
+
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto px-4">
+          A comprehensive collection of technical expertise and cutting-edge
+          skills
+          <br className="hidden sm:block" />
+          refined through innovative projects and continuous learning
+        </p>
+      </div>
+
+      {/* Skills Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {SkillsInfo.map((category, index) => (
+          <div
+            key={category.title}
+            className={`group relative ${
+              index === SkillsInfo.length - 1 && SkillsInfo.length % 2 !== 0
+                ? "lg:col-span-2 lg:max-w-2xl lg:mx-auto"
+                : ""
+            }`}
+          >
+            {/* Card Background with Glow Effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:blur-md"></div>
+
+            <Tilt
+              tiltMaxAngleX={8}
+              tiltMaxAngleY={8}
+              perspective={1000}
+              scale={1.02}
+              transitionSpeed={2000}
+              gyroscope={true}
+              className="relative"
+            >
+              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 group-hover:border-purple-500/30 transition-all duration-500 overflow-hidden">
+                {/* Header Glow */}
+                <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-purple-500/5 to-transparent"></div>
+
+                <div className="relative p-8">
+                  {/* Category Title */}
+                  <div className="flex items-center space-x-3 mb-8">
+                    <div className="w-2 h-8 bg-gradient-to-b from-purple-400 to-blue-400 rounded-full"></div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-wide">
+                      {category.title}
+                    </h2>
+                    <div className="flex-1 h-px bg-gradient-to-r from-purple-400/30 to-transparent"></div>
+                  </div>
+
+                  {/* Skills Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div
+                        key={skill.name}
+                        className="group/skill relative"
+                        style={{
+                          animationDelay: `${skillIndex * 100}ms`,
+                        }}
+                      >
+                        {/* Skill Card */}
+                        <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-600/30 p-4 transition-all duration-300 hover:scale-105 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/20">
+                          {/* Hover Glow Effect */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-blue-500/0 group-hover/skill:from-purple-500/10 group-hover/skill:to-blue-500/10 rounded-xl transition-all duration-300"></div>
+
+                          <div className="relative flex flex-col items-center space-y-3">
+                            {/* Icon Container */}
+                            <div className="relative p-3 bg-gray-700/50 rounded-lg group-hover/skill:bg-gray-600/50 transition-all duration-300">
+                              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 opacity-0 group-hover/skill:opacity-100 rounded-lg transition-all duration-300"></div>
+                              <img
+                                src={skill.logo}
+                                alt={`${skill.name} logo`}
+                                className="relative w-8 h-8 object-contain filter group-hover/skill:drop-shadow-lg transition-all duration-300"
+                              />
+                            </div>
+
+                            {/* Skill Name */}
+                            <span className="text-sm font-medium text-gray-300 group-hover/skill:text-white text-center leading-tight transition-colors duration-300">
+                              {skill.name}
+                            </span>
+                          </div>
+
+                          {/* Bottom Accent Line */}
+                          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-400/0 to-transparent group-hover/skill:via-purple-400/60 transition-all duration-300"></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Tilt>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
