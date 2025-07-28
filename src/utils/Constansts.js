@@ -3,13 +3,10 @@ import htmlLogo from "./../assets/tech_logo/html.png";
 import cssLogo from "./../assets/tech_logo/css.png";
 import javascriptLogo from "./../assets/tech_logo/javascript.png";
 import reactjsLogo from "./../assets/tech_logo/reactjs.png";
-import reduxLogo from "./../assets/tech_logo/redux.png";
 import tailwindcssLogo from "./../assets/tech_logo/tailwindcss.png";
 import nodejsLogo from "./../assets/tech_logo/nodejs.png";
 import expressjsLogo from "./../assets/tech_logo/express.png";
-import mysqlLogo from "./../assets/tech_logo/mysql.png";
 import mongodbLogo from "./../assets/tech_logo/mongodb.png";
-import firebaseLogo from "./../assets/tech_logo/firebase.png";
 import cLogo from "./../assets/tech_logo/c.png";
 import cppLogo from "./../assets/tech_logo/cpp.png";
 import javaLogo from "./../assets/tech_logo/java.png";
@@ -19,7 +16,7 @@ import gitLogo from "./../assets/tech_logo/git.png";
 import githubLogo from "./../assets/tech_logo/github.png";
 import vscodeLogo from "./../assets/tech_logo/vscode.png";
 import postmanLogo from "./../assets/tech_logo/postman.png";
-import mcLogo from "./../assets/tech_logo/mc.png";
+import tensorflowLogo from "./../assets/tech_logo/tensorflow.png";
 import vercelLogo from "./../assets/tech_logo/vercel.png";
 import postgreLogo from "./../assets/tech_logo/postgre.png";
 import numpyLogo from "./../assets/tech_logo/numpyLogo.png";
@@ -31,70 +28,98 @@ import seabornLogo from "./../assets/tech_logo/seaborn.png";
 import huggingfaceLogo from "./../assets/tech_logo/hf-logo.png";
 import opencvLogo from "./../assets/tech_logo/OpenCV.png";
 import colabLogo from "./../assets/tech_logo/colab.png";
-import fastapiLogo from "./../assets/tech_logo/fastapi.png";
+import appwriteLogo from "./../assets/tech_logo/appWrite.png";
 import flaskLogo from "./../assets/tech_logo/flask.png";
 import amritaLogo from "./../assets/education_logo/amrita.png";
 import apsLogo from "./../assets/education_logo/aps.jpg";
+import chatApp from "./../assets/project/chatApp.png";
+import matlabLogo from "./../assets/tech_logo/Matlab_Logo.png";
+import genaiLogo from "./../assets/tech_logo/genai.jpeg";
+import nlpLogo from "./../assets/tech_logo/nlp.png";
+import scipyLogo from "./../assets/tech_logo/scipy.png";
+import jupyterLogo from "./../assets/tech_logo/jupiter.png";
+import fileShare from "./../assets/project/fileShare.png";
 export const SkillsInfo = [
   {
-    title: "Frontend",
+    title: "Programming Languages",
+    skills: [
+      { name: "Java", logo: javaLogo },
+      { name: "JavaScript", logo: javascriptLogo },
+      { name: "Python", logo: pythonLogo },
+      { name: "TypeScript", logo: typescriptLogo },
+      { name: "C++", logo: cppLogo },
+      { name: "C", logo: cLogo },
+      { name: "MATLAB", logo: matlabLogo },
+    ],
+  },
+  {
+    title: "Web Development",
     skills: [
       { name: "HTML", logo: htmlLogo },
       { name: "CSS", logo: cssLogo },
-      { name: "JavaScript", logo: javascriptLogo },
-      { name: "React JS", logo: reactjsLogo },
-      { name: "Redux", logo: reduxLogo },
+      { name: "React.js", logo: reactjsLogo },
       { name: "Tailwind CSS", logo: tailwindcssLogo },
+      { name: "Node.js", logo: nodejsLogo },
+      { name: "Express.js", logo: expressjsLogo },
+      { name: "Flask", logo: flaskLogo },
     ],
   },
   {
-    title: "Backend",
+    title: "Databases & Tools",
     skills: [
-      { name: "Node JS", logo: nodejsLogo },
-      { name: "Express JS", logo: expressjsLogo },
-      { name: "MySQL", logo: mysqlLogo },
-      { name: "MongoDB", logo: mongodbLogo },
-      { name: "Firebase", logo: firebaseLogo },
       { name: "PostgreSQL", logo: postgreLogo },
-    ],
-  },
-  {
-    title: "Languages",
-    skills: [
-      { name: "C", logo: cLogo },
-      { name: "C++", logo: cppLogo },
-      { name: "Java", logo: javaLogo },
-      { name: "Python", logo: pythonLogo },
-      { name: "JavaScript", logo: javascriptLogo },
-      { name: "TypeScript", logo: typescriptLogo },
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
+      { name: "MongoDB", logo: mongodbLogo },
       { name: "Git", logo: gitLogo },
       { name: "GitHub", logo: githubLogo },
-      { name: "VS Code", logo: vscodeLogo },
       { name: "Postman", logo: postmanLogo },
-      { name: "Compass", logo: mcLogo },
+      { name: "VS Code", logo: vscodeLogo },
+      { name: "Appwrite", logo: appwriteLogo },
+      { name: "Colab", logo: colabLogo },
       { name: "Vercel", logo: vercelLogo },
     ],
   },
-
   {
-    title: "Machine Learning",
+    title: "Machine Learning & AI",
     skills: [
-      { name: "NumPy", logo: numpyLogo },
-      { name: "Pandas", logo: pandasLogo },
-      { name: "Scikit-Learn", logo: sklearnLogo },
       { name: "PyTorch", logo: pytorchLogo },
-      { name: "Matplotlib", logo: matplotlibLogo },
-      { name: "Seaborn", logo: seabornLogo },
+      { name: "Scikit-learn", logo: sklearnLogo },
       { name: "Hugging Face", logo: huggingfaceLogo },
       { name: "OpenCV", logo: opencvLogo },
-      { name: "Google Colab", logo: colabLogo },
-      { name: "FastAPI", logo: fastapiLogo },
-      { name: "Flask", logo: flaskLogo },
+      { name: "TensorFlow", logo: tensorflowLogo },
+      { name: "Generative AI", logo: genaiLogo },
+      { name: "NLP", logo: nlpLogo },
+    ],
+  },
+  {
+    title: "Data Science & Visualization",
+    skills: [
+      { name: "Pandas", logo: pandasLogo },
+      { name: "NumPy", logo: numpyLogo },
+      { name: "SciPy", logo: scipyLogo },
+      { name: "Matplotlib", logo: matplotlibLogo },
+      { name: "Seaborn", logo: seabornLogo },
+      { name: "Jupyter", logo: jupyterLogo },
+    ],
+  },
+  {
+    title: "CS Fundamentals",
+    skills: [
+      {
+        name: "DSA",
+        logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzRGNDZFNSIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5EU0E8L3RleHQ+Cjwvc3ZnPgo=",
+      },
+      {
+        name: "OOPs",
+        logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzEwQjk4MSIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5PT1A8L3RleHQ+Cjwvc3ZnPgo=",
+      },
+      {
+        name: "Operating Systems",
+        logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzM3NEE1QyIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5PUzwvdGV4dD4KPC9zdmc+Cg==",
+      },
+      {
+        name: "Networking",
+        logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iI0VGNDQ0NCIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5ORVQ8L3RleHQ+Cjwvc3ZnPgo=",
+      },
     ],
   },
 ];
@@ -103,8 +128,8 @@ export const SkillsInfo = [
 export const stats = [
   { key: "cgpa", label: "Current CGPA", target: 8.57, suffix: "" },
   { key: "technologies", label: "Technologies", target: 15, suffix: "+" },
-  { key: "projects", label: "Projects Built", target: 10, suffix: "+" },
-  { key: "certifications", label: "Certifications", target: 3, suffix: "+" },
+  { key: "projects", label: "Projects Built", target: 15, suffix: "+" },
+  { key: "certifications", label: "Certifications", target: 7, suffix: "+" },
 ];
 
 // Projects Section Data
@@ -114,7 +139,7 @@ export const projects = [
     title: "Helpdesk Ticket Manager",
     description:
       "AI-powered ticket system with auto-categorization, priority setting, LLM summaries, and event-driven backend using Inngest.",
-    image: "", // Add your image
+    image: "",
     tags: ["Node.js", "Express", "MongoDB", "JWT", "Inngest", "Google Gemini"],
     github: "https://github.com/your-username",
     webapp: "https://your-deployment-link",
@@ -124,20 +149,20 @@ export const projects = [
     title: "Real-Time Chat App",
     description:
       "A full-featured chat platform supporting DMs, media sharing, online status, and secure JWT authentication.",
-    image: "",
+    image: chatApp,
     tags: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    github: "https://github.com/ay05h/Chat-App",
+    webapp: "https://chat-app-six-ecru.vercel.app/login",
   },
   {
     id: 2,
     title: "Decentralized Health Record Sharing",
     description:
       "A blockchain-style system allowing secure, patient-controlled sharing of medical records with hospitals and doctors.",
-    image: "",
+    image: fileShare,
     tags: ["React", "JavaScript", "Tailwind", "Vite", "Web3"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    github: "https://github.com/ay05h/Decentralized-File-Storage-System",
+    webapp: "https://decentralized-file-storage-system.vercel.app/",
   },
   {
     id: 3,

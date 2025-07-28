@@ -14,10 +14,13 @@ function App() {
       className="relative min-h-screen overflow-hidden"
       style={{
         background:
-          "linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%)",
+          "linear-gradient(135deg, #0d1117 0%, #161b22 25%, #21262d 50%, #1c2128 75%, #0d1117 100%)",
       }}
     >
-      {/* Global Background Elements */}
+      <BlurBlob
+        position={{ top: "1%", left: "10%" }}
+        size={{ width: "35%", height: "10%" }}
+      />
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -26,7 +29,6 @@ function App() {
         <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-tr from-purple-500/6 to-blue-500/6 rounded-full blur-3xl animate-pulse delay-1500"></div>
       </div>
 
-      {/* Global Floating Particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {[...Array(25)].map((_, i) => (
           <div
@@ -42,16 +44,8 @@ function App() {
         ))}
       </div>
 
-      {/* Grid Pattern Overlay */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
-      {/* Your existing BlurBlob */}
-      <BlurBlob
-        position={{ top: "35%", left: "20%" }}
-        size={{ width: "30%", height: "40%" }}
-      />
-
-      {/* Main Content */}
       <div className="relative z-10 pt-20">
         <Header />
         <About />
@@ -61,7 +55,6 @@ function App() {
         <Projects />
       </div>
 
-      {/* Global Styles */}
       <style jsx>{`
         @keyframes float {
           0%,

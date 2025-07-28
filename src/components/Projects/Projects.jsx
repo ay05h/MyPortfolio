@@ -14,7 +14,7 @@ const Projects = () => {
 
   return (
     <section
-      id="work"
+      id="projects"
       className="relative py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-[7vw] lg:px-[12vw] xl:px-[20vw] font-sans"
     >
       <div className="relative z-10">
@@ -49,41 +49,33 @@ const Projects = () => {
             <div
               key={project.id}
               onClick={() => handleOpenModal(project)}
-              className="group relative cursor-pointer"
+              className="group relative cursor-pointer h-full"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
             >
-              {/* Card Glow Effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:blur-md"></div>
-
-              {/* Main Card */}
-              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 group-hover:border-purple-500/30 rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-purple-500/20">
-                {/* Header Glow */}
+              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 group-hover:border-purple-500/30 rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-purple-500/20 h-full flex flex-col">
+                {" "}
                 <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-purple-500/5 to-transparent"></div>
-
-                <div className="relative z-10 p-6">
-                  {/* Project Image */}
-                  <div className="relative overflow-hidden rounded-xl mb-6 bg-gray-800/50">
+                <div className="relative z-10 p-6 flex flex-col h-full">
+                  <div className="relative overflow-hidden rounded-xl mb-6 bg-gray-800/50 flex-shrink-0">
+                    {" "}
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-48 object-fill transform group-hover:scale-110 transition-transform duration-700 "
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                    {/* Overlay Effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
                   </div>
 
-                  {/* Project Title */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300 leading-tight flex-shrink-0">
                     {project.title}
                   </h3>
 
-                  {/* Project Description */}
                   <p
-                    className="text-gray-400 mb-6 leading-relaxed overflow-hidden group-hover:text-gray-300 transition-colors duration-300 text-sm sm:text-base"
+                    className="text-gray-400 mb-6 leading-relaxed overflow-hidden group-hover:text-gray-300 transition-colors duration-300 text-sm sm:text-base flex-grow" // Added flex-grow
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 3,
@@ -93,8 +85,8 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 flex-shrink-0">
+                    {" "}
                     {project.tags.slice(0, 4).map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -110,7 +102,6 @@ const Projects = () => {
                     )}
                   </div>
 
-                  {/* Bottom Accent Line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-400/0 to-transparent group-hover:via-purple-400/60 transition-all duration-300"></div>
                 </div>
               </div>
@@ -119,14 +110,11 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Enhanced Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4">
           <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
-            {/* Modal Glow Effect */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur opacity-50"></div>
 
-            {/* Modal Header */}
             <div className="relative flex justify-between items-center p-6 border-b border-gray-700/50">
               <h2 className="text-2xl font-bold text-white">Project Details</h2>
               <button
@@ -137,22 +125,19 @@ const Projects = () => {
               </button>
             </div>
 
-            {/* Modal Content */}
             <div className="relative overflow-y-auto max-h-[calc(90vh-120px)]">
               <div className="flex flex-col lg:flex-row">
-                {/* Image Section */}
                 <div className="lg:w-1/2 p-6">
                   <div className="relative overflow-hidden rounded-xl bg-gray-800/50">
                     <img
                       src={selectedProject.image}
                       alt={selectedProject.title}
-                      className="w-full h-64 lg:h-80 object-cover"
+                      className="w-full h-64 lg:h-80 object-fill"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                 </div>
 
-                {/* Content Section */}
                 <div className="lg:w-1/2 p-6 lg:pt-6">
                   <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                     {selectedProject.title}
@@ -162,7 +147,6 @@ const Projects = () => {
                     {selectedProject.description}
                   </p>
 
-                  {/* All Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {selectedProject.tags.map((tag, index) => (
                       <span
@@ -174,7 +158,6 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex gap-4">
                     <a
                       href={selectedProject.github}
