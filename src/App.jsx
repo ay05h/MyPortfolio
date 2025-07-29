@@ -7,6 +7,8 @@ import Skills from "./components/Skills/Skills";
 import StatsSection from "./components/About/StatsSection";
 import Projects from "./components/Projects/Projects";
 import Education from "./components/Education/Education";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
         <Education />
         <Skills />
         <Projects />
+        <Contact />
+        <Footer />
       </div>
 
       <style jsx>{`

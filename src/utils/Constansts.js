@@ -136,94 +136,232 @@ export const stats = [
 export const projects = [
   {
     id: 0,
-    title: "Helpdesk Ticket Manager",
-    description:
-      "AI-powered ticket system with auto-categorization, priority setting, LLM summaries, and event-driven backend using Inngest.",
+    title: "Helpdesk: AI-Powered Ticket Management System",
+    category: "Full Stack",
+    shortDescription:
+      "AI-powered ticket system with auto-categorization, priority setting, and intelligent routing.",
+    detailedDescription:
+      "Developed a comprehensive full-stack AI ticketing system that revolutionizes help desk management through automation. The system leverages Google Gemini API to automatically categorize tickets, assign priorities, and generate contextual summaries, reducing manual documentation effort by 70%. Integrated Inngest for asynchronous event handling including ticket fallback mechanisms and status notifications. Features secure role-based access control for Users, Moderators, and Admins with JWT authentication and HTTP-only cookies. The system includes automated moderator routing based on expertise and real-time notification systems.",
     image: "",
-    tags: ["Node.js", "Express", "MongoDB", "JWT", "Inngest", "Google Gemini"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Inngest",
+      "Google Gemini API",
+      "Nodemailer",
+    ],
+    github: "https://github.com/ay05h/helpdesk",
+    webapp: "",
+    featured: true,
+    techHighlights: [
+      "AI-powered categorization",
+      "Event-driven architecture",
+      "Role-based access control",
+    ],
+    status: "In Development",
   },
   {
     id: 1,
-    title: "Real-Time Chat App",
-    description:
-      "A full-featured chat platform supporting DMs, media sharing, online status, and secure JWT authentication.",
-    image: chatApp,
-    tags: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    github: "https://github.com/ay05h/Chat-App",
+    title: "Chatter: Real-Time Chat Application",
+    category: "Full Stack",
+    shortDescription:
+      "Secure messaging platform with real-time communication and media sharing capabilities.",
+    detailedDescription:
+      "Built a comprehensive real-time messaging platform supporting private DMs, group chats, media sharing, and persistent message history. Implemented Socket.IO for bi-directional real-time communication with active status updates and typing indicators. Features secure JWT authentication with bcrypt password hashing and React Hook Form for responsive form handling and validation. Integrated Cloudinary for media management and file sharing. The application supports message reactions, read receipts, and offline message synchronization.",
+    image: "",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "JWT",
+      "Cloudinary",
+    ],
+    github: "https://github.com/ay05h/chat-app",
     webapp: "https://chat-app-six-ecru.vercel.app/login",
+    featured: true,
+    techHighlights: [
+      "Real-time communication",
+      "Media sharing",
+      "Secure authentication",
+    ],
+    status: "Deployed",
   },
   {
     id: 2,
-    title: "Decentralized Health Record Sharing",
-    description:
-      "A blockchain-style system allowing secure, patient-controlled sharing of medical records with hospitals and doctors.",
-    image: fileShare,
-    tags: ["React", "JavaScript", "Tailwind", "Vite", "Web3"],
-    github: "https://github.com/ay05h/Decentralized-File-Storage-System",
-    webapp: "https://decentralized-file-storage-system.vercel.app/",
+    title: "StreamTweet: YouTube-Style Video Platform",
+    category: "Full Stack",
+    shortDescription:
+      "Comprehensive video sharing platform with social features and subscription system.",
+    detailedDescription:
+      "Developed a full-featured video-sharing platform that combines YouTube-style functionality with social media features. Supports video uploads, streaming, likes/dislikes, comments, and subscription systems. Added innovative tweet-style posts and social feeds for enhanced user engagement. Implemented robust JWT authentication with refresh token flow and bcrypt for session security. Features include personalized video recommendations, watch history, playlist creation, and advanced search functionality. Managed media uploads with Multer and Cloudinary integration, ensuring scalable file handling.",
+    image: "",
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Multer",
+      "Cloudinary",
+      "React.js",
+    ],
+    github: "https://github.com/ay05h/MyTube",
+    webapp: "",
+    featured: true,
+    techHighlights: [
+      "Video streaming",
+      "Social integration",
+      "Scalable architecture",
+    ],
+    status: "Completed",
   },
   {
     id: 3,
-    title: "Health Companion App",
-    description:
-      "An assistive tool for disabled individuals with voice-enabled features, smart alerts, and emergency contacts.",
+    title: "Decentralized Health Record Sharing",
+    category: "Blockchain",
+    shortDescription:
+      "Blockchain-based system for secure, patient-controlled medical record sharing.",
+    detailedDescription:
+      "Designed a decentralized healthcare platform enabling secure, patient-controlled sharing of medical records with healthcare providers. Utilizes blockchain technology to ensure data integrity and patient privacy while allowing authorized access to medical professionals. Features smart contract-based permission management, encrypted data storage, and audit trails for all access attempts. The system provides patients with complete control over their medical data while facilitating seamless information sharing between hospitals and doctors.",
     image: "",
-    tags: ["React", "JavaScript", "Accessibility", "Voice UI"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
-  },
-  {
-    id: 8,
-    title: "StreamTweet (YouTube + Social Feed)",
-    description:
-      "Video platform with uploads, subscriptions, and social tweet-style posts. Includes secure JWT auth and media management.",
-    image: "",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Solidity",
+      "Ethers.js",
+      "Web3",
+      "Blockchain",
+    ],
+    github: "https://github.com/ay05h/Decentralized-File-Storage-System",
+    webapp: "https://decentralized-file-storage-system.vercel.app/",
+    techHighlights: [
+      "Blockchain security",
+      "Patient data control",
+      "Smart contracts",
+    ],
+    status: "Deployed",
   },
   {
     id: 4,
-    title: "FinCortex – Financial Causality Detection",
-    description:
-      "Deep learning system using BiLSTM with attention for cause-effect inference in financial texts, with real-time analysis UI.",
+    title: "FinCortex: Financial Causality Detection System",
+    category: "Machine Learning",
+    shortDescription:
+      "Deep learning system for cause-effect detection in financial documents using BiLSTM and attention mechanisms.",
+    detailedDescription:
+      "Built an advanced deep learning system using custom BiLSTM architecture with multi-head attention for detecting cause-effect relationships in financial documents. Processed over 20,000 annotated financial text samples, achieving 84.81% overall accuracy with impressive F1 scores: 87.56% for effect spans and 95.82% for financial term recognition. Developed from scratch without relying on pre-trained models, ensuring domain-specific optimization. Created an interactive web application with Flask backend and responsive React frontend for real-time causal inference analysis, enabling financial analysts to quickly identify market causality patterns.",
     image: "",
-    tags: ["Python", "PyTorch", "Flask", "React", "BiLSTM", "NLP"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "Python",
+      "PyTorch",
+      "Flask",
+      "React.js",
+      "BiLSTM",
+      "NLP",
+      "Financial Analysis",
+    ],
+    github: "https://github.com/ay05h/FinCortex",
+    webapp: "",
+    featured: true,
+    techHighlights: [
+      "Custom deep learning model",
+      "Financial NLP",
+      "Real-time inference",
+    ],
+    status: "Completed",
   },
   {
     id: 5,
-    title: "Smart CCTV Surveillance System",
-    description:
-      "Motion-triggered surveillance with YOLOv8 for intrusion detection, alerting via NodeMCU and Twilio SMS.",
+    title: "Smart CCTV: Motion-Based Surveillance System",
+    category: "Computer Vision",
+    shortDescription:
+      "Intelligent surveillance system with motion detection and automated alerting capabilities.",
+    detailedDescription:
+      "Designed a lightweight, intelligent surveillance system that optimizes storage by recording only during motion events, reducing storage requirements by 60%. Integrated YOLOv8 for advanced object detection and intrusion zone monitoring with real-time alert capabilities. The system features IoT integration using NodeMCU for hardware control and Twilio SMS for immediate notifications. Includes a modular Flask backend supporting real-time camera feeds, event review, and system configuration. The solution combines computer vision, IoT, and cloud services for comprehensive security monitoring.",
     image: "",
-    tags: ["Python", "OpenCV", "YOLOv8", "Flask", "Twilio", "IoT"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "Python",
+      "OpenCV",
+      "YOLOv8",
+      "Flask",
+      "NodeMCU",
+      "Twilio",
+      "IoT",
+      "Computer Vision",
+    ],
+    github: "https://github.com/ay05h/smart-cctv",
+    webapp: "",
+    techHighlights: [
+      "Motion-based recording",
+      "IoT integration",
+      "Real-time alerts",
+    ],
+    status: "Completed",
   },
   {
     id: 6,
-    title: "EEG-Based IDD Detection",
-    description:
-      "ChronoNet-based model for diagnosing developmental disorders from EEG signals with 98.33% accuracy.",
+    title: "3D Brain Tumor Segmentation",
+    category: "Machine Learning",
+    shortDescription:
+      "Advanced 3D U-Net model with FPN for precise brain tumor segmentation from MRI scans.",
+    detailedDescription:
+      "Implemented a sophisticated 3D U-Net architecture enhanced with Feature Pyramid Networks (FPN) for accurate brain tumor segmentation from volumetric MRI data. Addressed the critical challenge of medical data imbalance using a custom joint Dice and Cross-Entropy loss function, significantly improving segmentation accuracy across different tumor types. Achieved high Dice score performance across tumor subregions on benchmark medical imaging datasets. The model processes 3D MRI volumes to identify and segment different tumor components including enhancing tumor, tumor core, and whole tumor regions.",
     image: "",
-    tags: ["Python", "PyTorch", "EEG", "ChronoNet", "Signal Processing"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "Python",
+      "PyTorch",
+      "3D U-Net",
+      "FPN",
+      "Medical Imaging",
+      "Deep Learning",
+    ],
+    github: "https://github.com/ay05h/Tumor-Segmentation",
+    webapp: "",
+    techHighlights: [
+      "3D medical imaging",
+      "Custom loss function",
+      "High accuracy segmentation",
+    ],
+    status: "Completed",
   },
   {
     id: 7,
-    title: "3D Brain Tumor Segmentation",
-    description:
-      "Used 3D U-Net with FPN to segment brain tumors from MRI scans, handling data imbalance with custom loss function.",
+    title: "EEG-Based IDD Detection System",
+    category: "Machine Learning",
+    shortDescription:
+      "ChronoNet-based deep learning model for diagnosing developmental disorders from EEG signals.",
+    detailedDescription:
+      "Developed an advanced deep learning model using ChronoNet architecture for diagnosing Intellectual and Developmental Disorders (IDD) through EEG signal analysis. Integrated comprehensive noise filtering, frequency extraction, and temporal-spatial feature analysis for accurate classification. Achieved exceptional validation accuracy of 98.33%, significantly outperforming traditional diagnostic methods. The system processes raw EEG signals through sophisticated preprocessing pipelines including artifact removal, frequency band analysis, and feature extraction before classification.",
     image: "",
-    tags: ["Python", "PyTorch", "FPN", "3D U-Net", "Medical Imaging"],
-    github: "https://github.com/your-username",
-    webapp: "https://your-deployment-link",
+    tags: [
+      "Python",
+      "PyTorch",
+      "ChronoNet",
+      "EEG Signal Processing",
+      "Scikit-learn",
+      "Medical AI",
+    ],
+    github: "https://github.com/ay05h/eeg-idd-detection",
+    webapp: "",
+    techHighlights: [
+      "Medical signal processing",
+      "High accuracy diagnosis",
+      "Temporal-spatial analysis",
+    ],
+    status: "Completed",
   },
+];
+
+export const projectCategories = [
+  { id: "all", name: "All Projects", icon: "🚀" },
+  { id: "Full Stack", name: "Full Stack", icon: "💻" },
+  { id: "Machine Learning", name: "Machine Learning", icon: "🤖" },
+  { id: "Computer Vision", name: "Computer Vision", icon: "👁️" },
+  { id: "Blockchain", name: "Blockchain", icon: "⛓️" },
 ];
 
 export const education = [

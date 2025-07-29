@@ -30,7 +30,6 @@ const Header = () => {
       const mostVisible = sortedEntries.find((entry) => entry.isIntersecting);
 
       if (mostVisible) {
-        console.log(`Setting active section to: ${mostVisible.target.id}`);
         setActiveSection(mostVisible.target.id);
       }
     };
@@ -46,9 +45,6 @@ const Header = () => {
       const element = document.getElementById(sectionId);
       if (element) {
         observer.observe(element);
-        console.log(
-          `Successfully observing section: ${sectionId}, Height: ${element.offsetHeight}px`
-        ); // Debug log
       } else {
         console.error(`Section with id "${sectionId}" not found!`);
       }
@@ -77,9 +73,6 @@ const Header = () => {
 
           if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
             if (activeSection !== sections[i]) {
-              console.log(
-                `Fallback: Setting active section to: ${sections[i]}`
-              );
               setActiveSection(sections[i]);
             }
             break;
